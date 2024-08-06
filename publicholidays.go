@@ -69,7 +69,7 @@ func (holidays Holidays) FilterByType(hTypes ...string) (Holidays, error) {
 }
 
 // GetHolidays fetches public holidays for a given year and country code
-func GetHolidays(year int, countryCode string) ([]Holiday, error) {
+func GetHolidays(year int, countryCode string) (Holidays, error) {
 	// Construct the URL
 	url := fmt.Sprintf("https://date.nager.at/api/v3/PublicHolidays/%d/%s", year, countryCode)
 
